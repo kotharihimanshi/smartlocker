@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart-Locker</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,49 +16,103 @@
             <img src="./images/logo1.jpg" alt="logo">
         </div>
         <div class="nav-r">
-
-            <button>Contact Us</button>
+            <button onclick="gotoHome()">Home</button>
+            <button onclick="navigateToSectionByClass('page-4')">Contact Us</button>
             <button>Log-in</button>
         </div>
     </div>
     <div id="main">
-    <div class="page-1">
-        <img src="./images/map.jpg" alt="">
-        <div class="tagline">
-            <h1>Where Security <br><span>Meets Innovation</span> </h1>
-        </div>
-        <div class="moving-div">
-            <div id="blur-left"></div>
-            <div class="move">
-                <p>Reliable | Secure | Convenient | Smart | Safe | Reliable | Secure | Convenient | Smart | Safe |
-                    Reliable | Secure | Convenient | Smart | Safe | Reliable | Secure | Convenient | Smart | Safe</p>
+        <div class="page-1">
+            <img src="./images/map.jpg" alt="">
+            <div class="tagline">
+                <h1>Where Security <br><span>Meets Innovation</span> </h1>
             </div>
-            <div id="blur-right"></div>
-        </div>
-        <img src="./images/locker 2.webp" alt="">
-
-    </div>
-
-    <div class="page-2">
-        <video src="./images/video.mp4"></video>
-        <div class="page2-center">
-            <div class="icon">
-                <i class="ri-play-fill"></i>
+            <div class="moving-div">
+                <div id="blur-left"></div>
+                <div class="move">
+                    <p>Reliable | Secure | Convenient | Smart | Safe | Reliable | Secure | Convenient | Smart | Safe |
+                        Reliable | Secure | Convenient | Smart | Safe | Reliable | Secure | Convenient | Smart | Safe
+                    </p>
+                </div>
+                <div id="blur-right"></div>
             </div>
-            <h5>Show Working</h5>
-        </div>
-    </div>
+            <img src="./images/locker 2.webp" alt="">
 
-    <div class="page-3">
-    <div class="left">
-        <p>Ready, Aim, Open</p>
-        <button onclick="navigatetoPage()" target="_blank">Find your locker ></button>
+        </div>
+
+        <div class="page-2">
+            <video src="./images/video.mp4"></video>
+            <div class="page2-center">
+                <div class="icon">
+                    <i class="ri-play-fill"></i>
+                </div>
+                <h5>Show Working</h5>
+            </div>
+        </div>
+
+        <div class="page-3">
+            <div class="left">
+                <p>Ready, Aim, Open</p>
+                <button onclick="navigatetoPage()" target="_blank">Find your locker ></button>
+            </div>
+            <div class="right">
+                <img src="./images/locker 3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="page-4">
+            <div class="page4-l">
+                <h3>Are You A Small Business?</h3>
+                <p id="para">Want to talk to us about hosting an Smart Locker on your property?</p>
+                <p>Fill in your details <i class="ri-arrow-right-fill"></i> <br> we will come back to you ASAP</p>
+            </div>
+            <div class="page4-r">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile No:</label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Company Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="page-5">
+            <div class="info">
+                <h1>Stay In The Know <span> </span> </h1>
+                <p>Pop your email below to catch all our latest updates </p>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <p id="p2">By giving us your email address, you are agreeing to hear about Smart Locker <br> promotions, offers and other services we think will interest you</p>
+            </div>
+            
+            <div class="info-r">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none"
+                    viewBox="0 0 121 120">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M120.999 16H110.09v10.909h10.909v-10.91Zm-120 0h10.909v10.91H.998V16Zm10.909 10.91h10.91v10.908h10.908v10.91h-10.91v-10.91H11.909V26.91Zm21.818 21.817h10.91v10.91h-10.91v-10.91Zm21.818 10.91H44.635v10.908h10.91V59.636Zm0 10.908h10.91v10.91h-10.91v-10.91Zm21.818-10.909H66.453v10.91h10.91v-10.91H88.27V48.727H77.362v10.91Zm21.819-21.818H88.27v10.91h10.91v-10.91Zm0-10.909h10.909v10.91h10.909v54.545H110.09V37.818H99.18V26.91ZM.999 37.82h10.909v54.545H.998V37.818Zm21.818-21.82H99.18v10.91H22.817v-10.91Zm87.273 76.365H11.908v10.909h98.182v-10.91Z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                
+            </div>
+        </div>
+
+
+
+
     </div>
-    <div class="right">
-        <img src="./images/locker 3.jpg" alt="">
-    </div>
-    </div>
-</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

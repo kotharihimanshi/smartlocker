@@ -19,6 +19,7 @@ function locomotiveAnimation() {               //to make locomotive and scrollTr
                 ? locoScroll.scrollTo(value, 0, 0)
                 : locoScroll.scroll.instance.scroll.y;
         },
+        
         getBoundingClientRect() {
             return {
                 top: 0,
@@ -66,5 +67,23 @@ function navigatetoPage() {
  function gotoHome(){
     window.location.href = "index.html";
 }
+
+function navigateToSectionByClass(className) {
+    const element = document.querySelector(`.${className}`);
+    if (element) {
+        element.scrollIntoView({ behavior: 'auto',  });
+        document.body.style.overflow = 'auto';  // Ensure scrolling is enabled
+        document.documentElement.style.overflow = 'auto';
+    } else {
+        console.error('Element with the class not found');
+    }
+}
+
+
+
+
+
+
+
 locomotiveAnimation()
 page2Animation()
