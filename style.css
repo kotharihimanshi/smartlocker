@@ -60,6 +60,7 @@ body.dark-mode {
     border: none;
     height: 35px;
     font-size: 18px;
+    align-items-center;
 }
 
 .nav-r button:hover {
